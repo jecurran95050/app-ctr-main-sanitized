@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App Central</title>
+        <meta name="description" content="Login page for the Application Center.">
+        <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css_login.css') }}" />
+</head>
+<body>
+
+<div id="login_wrapper">
+
+<span id="logo"><img src="{{ url_for('static', filename='images/main/cisco_logo_blue.svg') }}" alt="" width="72" height="72"></span>
+<h1 id="login">Application Central</h1>
+<form method="POST">
+    <label for="usrname">Username:</label>
+    <input type="text" id="usrname" name="username" pattern=".*\XXXX$" title="Not a XXXX account" onmouseover=focus() required>
+
+    <label for="psw">Password:</label>
+    <input type="password" id="psw" name="password" title="Please enter a password" onmouseover=focus() required>
+
+    <input type="submit" value="Submit" onmouseover=focus() onmouseout=blur()>
+
+    {% block content %}
+    <div class="container">
+        <br>
+        {% for message in get_flashed_messages() %}
+        <div class="alert-warning">
+            {{ message }}
+        </div>
+        {% endfor %}
+
+        {% block page_content %}{% endblock %}
+    </div>
+    {% endblock %}
+</form>
+
+</div> <!-- closes wrapper -->
+
+<script>
+
+var input1 = document.getElementById('usrname');
+input1.oninvalid = function(event) {
+    event.target.setCustomValidity("Not a XXXX account" );
+};
+input1.oninput = function(event) {
+    event.target.setCustomValidity("");
+};
+var input2 = document.getElementById('psw');
+input2.oninvalid = function(event) {
+    event.target.setCustomValidity("Please enter a password" );
+};
+input2.oninput = function(event) {
+    event.target.setCustomValidity("");
+};
+function focusInput() {
+    input1.focus();
+}
+focusInput();
+
+</script>
+
+</body>
+</html>

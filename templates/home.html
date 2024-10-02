@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App Central</title>
+    <meta name="description" content="Home Page for the Application Center.">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/css_home.css') }}" />
+</head>
+<body>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Welcome to App Central!</h2>
+    </div>
+    <div class="modal-body">
+      <p><b>Application Central</b> is a multi-container usability proof-of-concept that aims to broaden the consumption
+          of network automation via a simplified UX.  The project leverages the following technologies: </p>
+        <img id="idea" src="{{ url_for('static', filename='images/main/idea.jpg') }}" height="180" width="135">
+      <ul>
+      <li>Python3</li>
+      <li>HTML5 / CSS</li>
+      <li>JavaScript</li>
+      <li>Flask / Nginx</li>
+	  <li>Netmiko w/ TextFSM</li>
+      <li>Fernet Encryption</li>
+      <li>Docker w/ Compose</li>
+      <li>ServiceNow (ESP)</li>
+      <li>PostgreSQL</li>
+      <li>Redis</li>
+      <li>SparkBot</li>
+      <li>HTML Emails</li>
+      <li>Jinja2 Templates</li>
+      </ul>
+      <p>Feel free to explore the site and discover more about our use cases.
+      If you have any feedback or suggestions, please send them to:
+      <a href="mailto:XXXXXX">XXXXXX</a></p>
+      <p>Thank You!</p>
+    </div>
+    <div class="modal-footer">
+    <h3>Created By: James Curran</h3>
+    </div>
+  </div>
+</div>
+
+<div id="app_wrapper">
+
+    <section id="top">
+    <span id="logo">
+        <img src="{{ url_for('static', filename='images/main/cisco_logo_blue.svg') }}" alt="" width="72" height="72">
+    </span>
+        <h1>Application Central Home Page</h1>
+        <span id="control_pad">
+            <span id="buttons">
+        <button id="myBtn" onmouseover=focus() onmouseout=blur()>About App Central</button>
+        <button onclick="document.location.href='/'" onmouseover=focus() onmouseout=blur()>Logout</button>
+                </span>
+            <span id="login_text">Logged in as: <span id="user">{{user}}</span></span>
+        </span>
+    </section>
+
+
+
+    <section id="main">
+        <form method="POST" id="apps">
+            <span class="app_row">
+                <input type="submit" class="live" value="VLXXX Ports" name="app">
+                <input type="submit" class="live" value="VLXXX Subnets" name="app">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+            </span>
+            <span class="app_row">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+            </span>
+            <span class="app_row">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+            </span>
+            <span class="app_row" id="last_row">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+                <input type="button" class="inactive" value="Coming Soon">
+            </span>
+        </form>
+    </section>
+
+    <section id="bottom">
+
+    </section>
+
+</div> <!-- closes wrapper -->
+
+    <script>
+
+        // Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal
+		btn.onclick = function() {
+ 		 	modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+  			if (event.target == modal) {
+    			modal.style.display = "none";
+  			}
+		}
+
+    </script>
+
+</body>
+</html>

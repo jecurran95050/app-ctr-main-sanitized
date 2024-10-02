@@ -1,0 +1,103 @@
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url(../images/main/cisco_building.jpg);
+    height:100%;
+    min-height:80em;
+    min-width:60em;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+	padding:0;
+}
+
+#login_wrapper {
+    border-top:5px ridge #000000;
+    border-left:5px ridge #000000;
+    border-right:5px groove #000000;
+    border-bottom:5px groove #000000;
+    background:#fdfdfd;
+    min-width:37em;
+    min-height:22em;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height:35%;
+    width: 32%;
+    margin:10em auto 0;
+    border-radius: 25px;
+}
+
+span#logo img {
+    padding-left:.6em;
+}
+
+h1 {
+    top:-.5em;
+    padding:.5em;
+    padding-left:1.30em;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-stroke-color:#6a6a6a;
+    color:#049fd9;
+    position:relative;
+    display: inline;
+    font-size: 2.25em;
+}
+
+h1#esp {
+    padding-left:1em;
+}
+
+h1#pg {
+    padding-left:1em;
+}
+
+h1#am {
+    padding-left:1em;
+}
+
+h1#sys {
+    padding-left:1em;
+}
+
+form {
+    margin-top:.5em;
+    border-top:3px solid #000000;
+    padding:3em 1em;
+    border-bottom:3px solid #000000;
+    background-color:#fbfdfe;
+    max-height: 4em;
+    min-height: 4em;
+    overflow: hidden;
+    -moz-box-shadow:  0 0 5px #000000;
+    -webkit-box-shadow: 0 0 5px #000000;
+    box-shadow: 0 0 5px #000000;
+}
+
+form input {
+    margin-right:.3em;
+}
+
+div.container {
+    padding-bottom:2em;
+    position:relative;
+}
+
+div.alert-warning {
+    margin:1em;
+    padding-left:7em;
+    color:red;
+}
+
+div.alert-warning-esp {
+    margin:0 1em 1em;
+    padding-left:14em;
+    color:red;
+}

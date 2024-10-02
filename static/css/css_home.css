@@ -1,0 +1,277 @@
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url(../images/main/cisco_building.jpg);
+    height:100%;
+    min-height:80em;
+    min-width:60em;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+	padding:0;
+}
+
+#app_wrapper {
+    background-color:#fefefe;
+    min-width:67em;
+    position:relative;
+    min-height:55em;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 60%;
+	margin:0 auto 0;
+    border:5px ridge #000000;
+    border-right:5px groove #000000;
+    border-bottom:5px groove #000000;
+    border-radius: 25px;
+
+}
+
+section#top {
+    border-bottom:#666666 solid 5px;
+    background-color:#fdfdfd;
+    border-radius: 25px 25px 0 0;
+}
+
+section#top span#logo img {
+    margin-left:1em;
+}
+
+section#top h1 {
+    font-size:36px;
+    padding:.5em;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-stroke-color:#6a6a6a;
+    color:#049fd9;
+    display: inline;
+    top:-.6em;
+    margin-left:12.9%;
+    position:relative;
+}
+
+section#top span#control_pad {
+    float:right;
+    border-bottom:#000000 ridge 3px;
+    border-left:#000000 ridge 3px;
+    border-radius: 0 20px 0 25px;
+    padding:2px 1em 6px .6em;
+    background-color:#f9f9f9;
+    min-width: 15em;
+}
+
+section#top span#control_pad span#buttons {
+    padding-left:3em;
+    display: block;
+}
+
+section#top span#control_pad span#login_text {
+    margin-bottom:-5px;
+    top:2px;
+    position:relative;
+    margin-left:.5em;
+    color:#049fd9;
+}
+
+section#top span#control_pad span#user {
+    color:#00008b;
+    padding-left:5px;
+}
+
+section#top span#control_pad span#user:hover {
+    color:#00008b;
+}
+
+section#main {
+    border-bottom:#999999 solid 4px;
+    background-color:#ffffff;
+    min-height:47em;
+    max-height: 47em;
+    overflow-y: scroll;
+}
+
+section#main form#apps {
+    min-height:47em;
+    background-color:#fbfbfb;
+}
+
+section#main form#apps span.app_row {
+    padding-left:12px;
+    display:block;
+}
+
+section#main form#apps span#last_row {
+    padding-left:12px;
+    display:block;
+    padding-bottom:48px;
+}
+
+section#main form#apps input {
+    background:#fdfdfd url(../images/main/Cisco_Logo_Blue.png) no-repeat;
+    width:200px;
+    height:200px;
+    border:#222222 2px solid;
+    border-bottom:#000000 4px solid;
+    border-right:#000000 4px solid;
+    border-radius: 50px 10px 50px 10px;
+    margin:48px 0 0 48px;
+    display:inline-block;
+    font-weight:bold;
+    font-size:20px;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-stroke-color:#6a6a6a;
+    color:#64ffff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4),0 6px 20px 0 rgba(0,0,0,0.3);
+}
+
+section#main form#apps input.live {
+    -webkit-text-stroke-color:#000000;
+    color:#4444ff;
+}
+
+section#main form#apps input.live:hover {
+    background:#f7f7f7 url(../images/main/Cisco_Logo_Blue.png) no-repeat;
+}
+
+section#main form#apps input.live:active {
+    background:#ececf0 url(../images/main/Cisco_Logo_Blue.png) no-repeat;
+    opacity: 50%;
+}
+
+section#bottom  {
+    min-height:2.25em;
+    border-radius: 0 0 20px 20px;
+    background-color:#fbfefe;
+}
+
+
+
+.custom_button {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 1px 3px #666666;
+    -moz-box-shadow: 0 1px 3px #666666;
+    box-shadow: 0 1px 3px #666666;
+    font-family: Georgia serif;
+    color: #ffffff;
+    font-size: 20px;
+    background: #3498db;
+    padding: 3px 20px 3px 20px;
+    border: solid #1f628d 2px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right:5px;
+}
+
+.custom_button:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
+
+.custom_button:active{
+    background: #04489b;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  width:600px;
+  height:600px;
+  position: relative;
+  background-color: #fbfbfb;
+  margin: auto;
+  padding: 0;
+  border:#222222 3px solid;
+  border-bottom:#000000 5px solid;
+  border-right:#000000 5px solid;
+  border-radius: 50px 15px 50px 15px;
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,0.4),0 18px 60px 0 rgba(0,0,0,0.3);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color:#2c882c;
+  color: white;
+  min-height:70px;
+  max-height:70px;
+  text-align: center;
+  border-radius: 46px 10px 0 0;
+  border-bottom:#333333 solid 3px;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  min-height:454px;
+  max-height:454px;
+}
+
+.modal-footer {
+  padding: 2px 26px 2px 16px;
+  background-color:#2c882c;
+  color: white;
+  min-height:60px;
+  max-height:60px;
+  border-radius: 0 0 45px 10px;
+  border-top:#333333 solid 3px;
+  text-align: right;
+}
+
+#idea {
+  position:relative;
+  float: right;
+  margin-right: 6em;
+}
+
