@@ -3,6 +3,9 @@
 This repo is a sub-component for Application Central.  For more info, please visit:
 SANITIZED
 
+## Note about Sanitization:
+This is a sanitized version of my original project.  Unfortunately, due to sanitization, the project no longer functions as expected.
+
 ## Main Module Docker Container
 
 - The main module leverages Nginx as both a web server and reverse-proxy.
